@@ -1,0 +1,28 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+	--font-body: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-mono: 'Roboto', monospace;
+	--color-text: rgba(0, 0, 0, 0.7);
+	font-family: var(--font-body);
+	color: var(--color-text);
+}
+
+/* Set the root font size */
+html {
+    font-size: 16px; 
+}
+
+svg {
+	outline: 0 !important;
+}
+  
+body {
+	min-height: 100vh;
+	margin: 0;
+	background-attachment: fixed;
+	background-size: 100vw 100vh;
+	background: #000;
+}
