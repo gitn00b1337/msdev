@@ -5,7 +5,7 @@
 	import { Input, Label, Textarea } from "flowbite-svelte";
     import { z } from "zod";
 	import { Turnstile } from 'svelte-turnstile';
-
+    
     let name = "";
     let email = "";
     let message = "";
@@ -161,9 +161,13 @@
                                 <p class="text-red-400">{validationErrors.message._errors[0]}</p>
                                 {/if}
                             </div>
-                            <div class="flex flex-row justify-between ">
-                                <div>
-                                    <Turnstile siteKey="0x4AAAAAAA8A8hpuiIBTHp_h" theme='dark' />
+                            <div class="flex flex-col md:flex-row justify-between gap-1">
+                                <div id="cf-turnstile-container" class="flex overflow-hidden">
+                                    <Turnstile 
+                                        size='flexible' 
+                                        siteKey="0x4AAAAAAA8A8hpuiIBTHp_h" 
+                                        theme='dark' 
+                                    />
                                 </div>
                                 <div>
                                     <Button variant="white" chevron type="submit" disabled={submitted}>
@@ -190,3 +194,4 @@
          </div>
     </div>
 </Section>
+
